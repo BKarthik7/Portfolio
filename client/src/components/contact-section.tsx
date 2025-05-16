@@ -1,0 +1,245 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, Linkedin } from "lucide-react";
+
+// Define form schema with validation
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  subject: z.string().min(2, { message: "Subject must be at least 2 characters" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+});
+
+type ContactFormValues = z.infer<typeof formSchema>;
+
+export default function ContactSection() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Define form using react-hook-form + zod
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+  
+  // Setup mutation for form submission
+  const mutation = useMutation({
+    mutationFn: (values: ContactFormValues) => {
+      return apiRequest("POST", "/api/contact", values);
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message sent successfully!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+        variant: "default",
+      });
+      form.reset();
+    },
+    onError: (error) => {
+      toast({
+        title: "Error sending message",
+        description: error.message || "Please try again later.",
+        variant: "destructive",
+      });
+    },
+    onSettled: () => {
+      setIsSubmitting(false);
+    },
+  });
+  
+  // Handle form submission
+  const onSubmit = (values: ContactFormValues) => {
+    setIsSubmitting(true);
+    mutation.mutate(values);
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-lg text-zinc-500 max-w-2xl mx-auto">
+              Interested in working together? I'm always open to discussing new projects,
+              creative ideas or opportunities to be part of your vision.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              className="col-span-1"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="space-y-6">
+                <div className="bg-zinc-100 p-5 rounded-xl">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Mail className="text-primary h-5 w-5" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-medium">Email</h3>
+                      <a href="mailto:bangikarthik7@gmail.com" className="text-sm text-primary hover:underline">
+                        bangikarthik7@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-zinc-100 p-5 rounded-xl">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Phone className="text-primary h-5 w-5" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-medium">Phone</h3>
+                      <a href="tel:+919110670792" className="text-sm text-primary hover:underline">
+                        +91 9110670792
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-zinc-100 p-5 rounded-xl">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Linkedin className="text-primary h-5 w-5" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-medium">LinkedIn</h3>
+                      <a href="https://linkedin.com/in/bkarthik7" className="text-sm text-primary hover:underline">
+                        linkedin.com/in/bkarthik7
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="col-span-2"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="bg-zinc-100 p-8 rounded-xl"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Your name" 
+                              className="bg-white" 
+                              {...field} 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Your email" 
+                              className="bg-white" 
+                              type="email" 
+                              {...field} 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem className="mb-6">
+                        <FormLabel>Subject</FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="Subject" 
+                            className="bg-white" 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem className="mb-6">
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Your message" 
+                            className="bg-white" 
+                            rows={5} 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full" 
+                    disabled={isSubmitting || mutation.isPending}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </Form>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
