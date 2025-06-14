@@ -38,7 +38,7 @@ export default function Footer() {
                 <FaGithub className="text-xl" />
               </a>
               <a 
-                href="#" 
+                href="https://x.com/B_Karthik_7" 
                 className="text-zinc-400 hover:text-white transition-colors" 
                 aria-label="Twitter"
                 target="_blank"

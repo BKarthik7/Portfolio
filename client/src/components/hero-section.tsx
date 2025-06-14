@@ -24,7 +24,7 @@ export default function HeroSection() {
 					>
 						<h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
 							App and Web{" "}
-							<span className="text-primary">Development</span>
+							<span className="text-primary">Developer</span>
 						</h1>
 						<p className="text-lg md:text-xl text-zinc-500 mb-8 max-w-lg">
 							C++ Enthusiast | Aspiring Software Engineer |
@@ -82,7 +82,7 @@ export default function HeroSection() {
 					>
 						<FloatingDeviceFrame>
 							<img
-								src="https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg"
+								src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
 								alt="App Development Interface"
 								className="h-full w-full object-cover"
 							/>

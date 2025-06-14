@@ -56,13 +56,13 @@ export default function ProjectsSection() {
 					</button>
 					<button
 						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
-							activeFilter === "Flutter"
+							activeFilter === "MERN"
 								? "active"
 								: "hover:border-primary hover:text-primary"
 						}`}
-						onClick={() => setActiveFilter("Flutter")}
+						onClick={() => setActiveFilter("MERN")}
 					>
-						Flutter
+						MERN
 					</button>
 					<button
 						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
@@ -76,6 +76,16 @@ export default function ProjectsSection() {
 					</button>
 					<button
 						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
+							activeFilter === "Flutter"
+								? "active"
+								: "hover:border-primary hover:text-primary"
+						}`}
+						onClick={() => setActiveFilter("Flutter")}
+					>
+						Flutter
+					</button>
+					<button
+						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
 							activeFilter === "Python"
 								? "active"
 								: "hover:border-primary hover:text-primary"
@@ -83,16 +93,6 @@ export default function ProjectsSection() {
 						onClick={() => setActiveFilter("Python")}
 					>
 						Python
-					</button>
-					<button
-						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
-							activeFilter === "MERN"
-								? "active"
-								: "hover:border-primary hover:text-primary"
-						}`}
-						onClick={() => setActiveFilter("MERN")}
-					>
-						MERN
 					</button>
 					<button
 						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${

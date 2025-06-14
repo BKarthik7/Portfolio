@@ -47,7 +47,7 @@ export const projects: Project[] = [
 		description:
 			"A real-time chat application built with JavaScript and WebSocket.",
 		image: "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg",
-		category: "JavaScript",
+		category: "MERN",
 		isMobile: false,
 		tags: ["Chat", "Realtime"],
 	},

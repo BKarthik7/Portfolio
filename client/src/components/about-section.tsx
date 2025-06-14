@@ -132,7 +132,7 @@ export default function AboutSection() {
 									<p className="text-zinc-500">
 										B.E Computer Science & Engineering
 									</p>
-									<p className="text-sm">GPA: 8.87</p>
+									<p className="text-sm">GPA: 8.6</p>
 								</div>
 
 								<div className="bg-zinc-100 p-5 rounded-lg">

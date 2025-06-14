@@ -25,7 +25,7 @@ export default function ExperienceSection() {
             <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
-                <h3 className="text-xl font-semibold">Web Development Intern</h3>
+                <h3 className="text-xl font-semibold">Frontend Web Development Intern</h3>
                 <div className="flex items-center mt-2 md:mt-0">
                   <span className="text-zinc-500">Aamara Technologies</span>
                   <span className="mx-2 text-zinc-500">•</span>
