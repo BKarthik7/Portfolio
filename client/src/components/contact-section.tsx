@@ -69,7 +69,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white relative">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div 
@@ -85,8 +85,7 @@ export default function ContactSection() {
               creative ideas or opportunities to be part of your vision.
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <motion.div 
               className="col-span-1"
               initial={{ opacity: 0, x: -20 }}
@@ -138,18 +137,21 @@ export default function ContactSection() {
                 </div>
               </div>
             </motion.div>
-            
             <motion.div 
-              className="col-span-2"
+              className="col-span-2 relative"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
+              {/* Overlay for disabling the contact form */}
+              <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/30 backdrop-blur-xs rounded-xl">
+                <span className="text-xl font-semibold text-zinc-700">Contact form is disabled by admin</span>
+              </div>
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="bg-zinc-100 p-8 rounded-xl"
+                  className="bg-zinc-100 p-8 rounded-xl pointer-events-none select-none opacity-60"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <FormField
@@ -162,6 +164,7 @@ export default function ContactSection() {
                             <Input 
                               placeholder="Your name" 
                               className="bg-white" 
+                              disabled
                               {...field} 
                             />
                           </FormControl>
@@ -181,6 +184,7 @@ export default function ContactSection() {
                               placeholder="Your email" 
                               className="bg-white" 
                               type="email" 
+                              disabled
                               {...field} 
                             />
                           </FormControl>
@@ -200,6 +204,7 @@ export default function ContactSection() {
                           <Input 
                             placeholder="Subject" 
                             className="bg-white" 
+                            disabled
                             {...field} 
                           />
                         </FormControl>
@@ -219,6 +224,7 @@ export default function ContactSection() {
                             placeholder="Your message" 
                             className="bg-white" 
                             rows={5} 
+                            disabled
                             {...field} 
                           />
                         </FormControl>
