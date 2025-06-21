@@ -10,6 +10,7 @@ export default function ProjectsSection() {
 	const [activeFilter, setActiveFilter] = useState<ProjectCategory | "All">(
 		"All"
 	);
+	const [showAll, setShowAll] = useState(false);
 
 	const filteredProjects =
 		activeFilter === "All"
@@ -17,6 +18,8 @@ export default function ProjectsSection() {
 			: projectsData.filter(
 					(project) => project.category === activeFilter
 			  );
+
+	const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
 	return (
 		<section id="projects" className="py-20 bg-white">
@@ -128,7 +131,7 @@ export default function ProjectsSection() {
 
 				{/* Project Grid */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{filteredProjects.map((project, index) => (
+					{displayedProjects.map((project, index) => (
 						<ProjectCard
 							key={project.id}
 							project={project}
@@ -137,15 +140,17 @@ export default function ProjectsSection() {
 					))}
 				</div>
 
-				<div className="mt-12 text-center">
-					<a
-						href="#projects"
-						className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary font-medium rounded-lg transition-all hover:bg-primary/5"
-					>
-						View All Projects
-						<ArrowRight className="ml-2 h-4 w-4" />
-					</a>
-				</div>
+				{filteredProjects.length > 6 && (
+					<div className="mt-12 text-center">
+						<button
+							onClick={() => setShowAll((prev) => !prev)}
+							className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary font-medium rounded-lg transition-all hover:bg-primary/5"
+						>
+							{showAll ? "Show Less" : "View All Projects"}
+							<ArrowRight className="ml-2 h-4 w-4" />
+						</button>
+					</div>
+				)}
 			</div>
 		</section>
 	);
@@ -201,7 +206,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						View Details
+						View Github
 					</a>
 				</div>
 			</div>

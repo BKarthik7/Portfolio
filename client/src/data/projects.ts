@@ -2,11 +2,21 @@ import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
 	{
+		id: 0,
+		title: "Team-Sync-Presenter-View",
+		description:
+			"A MERN app for real-time peer evaluation and feedback during team presentations.",
+		image: "https://images.pexels.com/photos/8424484/pexels-photo-8424484.jpeg",
+		category: "MERN",
+		isMobile: false,
+		tags: ["React", "MongoDB", "Pusher", "Real-time"],
+	},
+	{
 		id: 1,
 		title: "SyncScribe",
 		description:
 			"A local-first note-taking app with Turso DB, supporting offline writes and real-time syncing.",
-		image: "https://images.pexels.com/photos/4046303/pexels-photo-4046303.jpeg",
+		image: "https://images.pexels.com/photos/7578209/pexels-photo-7578209.jpeg",
 		category: "React Native",
 		isMobile: true,
 		tags: ["React-Native", "Turso-Db"],
@@ -63,10 +73,10 @@ export const projects: Project[] = [
 	},
 	{
 		id: 7,
-		title: "certificate-portfolio",
+		title: "Certificate-Portfolio",
 		description:
 			"A React app for managing and displaying certificates, integrated with Supabase for auth.",
-		image: "https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg",
+		image: "https://images.pexels.com/photos/32559169/pexels-photo-32559169.jpeg",
 		category: "React",
 		isMobile: false,
 		tags: ["React", "Supabase"],
@@ -76,14 +86,14 @@ export const projects: Project[] = [
 		title: "Course-Tracker",
 		description:
 			"A React/Supabase web app to track and manage courses with user-friendly dashboards.",
-		image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+		image: "https://images.pexels.com/photos/3912956/pexels-photo-3912956.jpeg",
 		category: "React",
 		isMobile: false,
 		tags: ["React", "Supabase"],
 	},
 	{
 		id: 9,
-		title: "chit_chat",
+		title: "Chit_Chat",
 		description:
 			"A Flutter chat application UI to learn Flutter for the first time.",
 		image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg",
@@ -93,17 +103,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: 10,
-		title: "WakeUpCall",
-		description:
-			"An Android alarm app built in Kotlin with customizable wake-up routines.",
-		image: "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg",
-		category: "React Native",
-		isMobile: true,
-		tags: ["Android", "Kotlin"],
-	},
-	{
-		id: 11,
-		title: "recipe_manager",
+		title: "Recipe_Manager",
 		description:
 			"A Rust-based recipe manager using the Iced GUI framework and JSON storage.",
 		image: "https://images.pexels.com/photos/6207675/pexels-photo-6207675.jpeg",
@@ -112,8 +112,8 @@ export const projects: Project[] = [
 		tags: ["Rust", "Iced"],
 	},
 	{
-		id: 12,
-		title: "my_shell",
+		id: 11,
+		title: "My_Shell",
 		description:
 			"A simple Unix-style shell implemented in Rust for command parsing and execution.",
 		image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
@@ -122,17 +122,17 @@ export const projects: Project[] = [
 		tags: ["Rust", "Systems"],
 	},
 	{
-		id: 13,
+		id: 12,
 		title: "RailwayReservationSystem",
 		description:
 			"A Streamlit & SQLite-based web app for booking railway tickets and managing schedules.",
-		image: "https://images.pexels.com/photos/353254/pexels-photo-353254.jpeg",
+		image: "https://images.pexels.com/photos/32555917/pexels-photo-32555917.jpeg",
 		category: "Python",
 		isMobile: false,
 		tags: ["Streamlit", "Sqlite"],
 	},
 	{
-		id: 14,
+		id: 13,
 		title: "VacTrafficAI",
 		description:
 			"Python-based AI model for predicting and visualizing traffic patterns.",
@@ -142,7 +142,7 @@ export const projects: Project[] = [
 		tags: ["Python", "Ai"],
 	},
 	{
-		id: 15,
+		id: 14,
 		title: "JavaScript-Projects",
 		description:
 			"A collection of fun JavaScript and CSS/HTML projects built just for experimentation.",
@@ -152,18 +152,18 @@ export const projects: Project[] = [
 		tags: ["Javascript", "Html"],
 	},
 	{
-		id: 16,
-		title: "terminal-portfolio",
+		id: 15,
+		title: "Terminal-Portfolio",
 		description:
 			"A JavaScript terminal-style portfolio website showcasing projects in a command-line interface.",
-		image: "https://images.pexels.com/photos/5473958/pexels-photo-5473958.jpeg",
+		image: "https://images.pexels.com/photos/5717758/pexels-photo-5717758.jpeg",
 		category: "React",
 		isMobile: false,
 		tags: ["Portfolio", "Javascript"],
 	},
 	{
-		id: 17,
-		title: "glimpse",
+		id: 16,
+		title: "Glimpse",
 		description:
 			"A platform to share and explore interview experiences with user submissions and browsing.",
 		image: "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
@@ -172,8 +172,8 @@ export const projects: Project[] = [
 		tags: ["Javascript", "Community"],
 	},
 	{
-		id: 18,
-		title: "short-sweet",
+		id: 17,
+		title: "Short-Sweet",
 		description:
 			"An AngularJS project to generate short URLs using the Bitly API.",
 		image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg",
@@ -182,21 +182,21 @@ export const projects: Project[] = [
 		tags: ["Angularjs", "Typescript"],
 	},
 	{
-		id: 19,
+		id: 18,
 		title: "The-Classic-Snake-Game",
 		description:
 			"A web-based rendition of the classic Snake game, built for browser play.",
-		image: "https://images.pexels.com/photos/1633764/pexels-photo-1633764.jpeg",
+		image: "https://images.pexels.com/photos/8762881/pexels-photo-8762881.jpeg",
 		category: "JavaScript",
 		isMobile: false,
 		tags: ["Javascript", "Game"],
 	},
 	{
-		id: 20,
-		title: "maze-game-extention",
+		id: 19,
+		title: "Maze-Game-Extention",
 		description:
 			"A browser-based maze game extension built with vanilla JavaScript.",
-		image: "https://images.pexels.com/photos/256410/pexels-photo-256410.jpeg",
+		image: "https://images.pexels.com/photos/1904198/pexels-photo-1904198.jpeg",
 		category: "JavaScript",
 		isMobile: false,
 		tags: ["Game", "Javascript"],
