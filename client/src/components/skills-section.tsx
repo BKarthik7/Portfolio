@@ -38,7 +38,7 @@ export default function SkillsSection() {
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                Java, Python
+                Java, Python, Kotlin
               </li>
             </ul>
           </motion.div>
@@ -65,7 +65,7 @@ export default function SkillsSection() {
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-                React Native, Angular
+                React Native, Angular, Flutter
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
