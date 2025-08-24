@@ -135,6 +135,27 @@ export default function ContactSection() {
                     </div>
                   </div>
                 </div>
+
+                <div className="bg-zinc-100 p-5 rounded-xl">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      {/* You can use a download icon or keep it simple */}
+                      <svg xmlns="http://www.w3.org/2000/svg" className="text-primary h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" /></svg>
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-medium">Resume</h3>
+                      <a
+                        href="https://drive.google.com/uc?export=download&id=1QOuJnbIKC92yz9nxSiQdNpfmJx2--9NN"
+                        className="text-sm text-primary hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                      >
+                        Download Resume
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
             <motion.div 

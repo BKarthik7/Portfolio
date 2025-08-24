@@ -9,6 +9,7 @@ const navigationLinks = [
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
+  { href: "https://drive.google.com/uc?export=download&id=1QOuJnbIKC92yz9nxSiQdNpfmJx2--9NN", label: "Resume", external: true },
 ];
 
 export default function Navbar() {
@@ -16,10 +17,14 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("about");
   const [location] = useLocation();
 
-  // Handle smooth scrolling for anchor links
-  const handleClick = (sectionId: string) => {
+  // Handle smooth scrolling for anchor links and external links
+  const handleClick = (link: typeof navigationLinks[0]) => {
     setIsMenuOpen(false);
-    const element = document.getElementById(sectionId);
+    if (link.external) {
+      window.open(link.href, "_blank");
+      return;
+    }
+    const element = document.getElementById(link.href.substring(1));
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -31,14 +36,12 @@ export default function Navbar() {
       const scrollPosition = window.scrollY;
       
       // Get all sections and find which one is currently in view
-      const sections = navigationLinks.map(link => link.href.substring(1));
-      
+      const sections = navigationLinks.filter(link => !link.external).map(link => link.href.substring(1));
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const { top, bottom } = element.getBoundingClientRect();
           const isInView = top <= 100 && bottom >= 100;
-          
           if (isInView) {
             setActiveSection(section);
             break;
@@ -70,19 +73,31 @@ export default function Navbar() {
           
           <nav className="hidden md:flex space-x-8">
             {navigationLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleClick(link.href.substring(1));
-                }}
-                className={`nav-link-indicator font-medium ${
-                  activeSection === link.href.substring(1) ? "active" : ""
-                }`}
-              >
-                {link.label}
-              </a>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link-indicator font-medium"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleClick(link);
+                  }}
+                  className={`nav-link-indicator font-medium ${
+                    activeSection === link.href.substring(1) ? "active" : ""
+                  }`}
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </nav>
           
@@ -103,17 +118,29 @@ export default function Navbar() {
           <div className="md:hidden">
             <div className="flex flex-col space-y-4 mt-4 pb-4">
               {navigationLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleClick(link.href.substring(1));
-                  }}
-                  className="font-medium"
-                >
-                  {link.label}
-                </a>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClick(link);
+                    }}
+                    className="font-medium"
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
             </div>
           </div>
