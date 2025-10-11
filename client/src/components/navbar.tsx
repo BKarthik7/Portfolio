@@ -9,7 +9,7 @@ const navigationLinks = [
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
-  { href: "https://drive.google.com/uc?export=download&id=1QOuJnbIKC92yz9nxSiQdNpfmJx2--9NN", label: "Resume", external: true },
+  { href: "https://drive.google.com/uc?export=download&id=1o-Z2SKiybNiB_t5peP-yVohAKIwOS0UI", label: "Resume", external: true },
 ];
 
 export default function Navbar() {
