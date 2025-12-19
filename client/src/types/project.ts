@@ -2,6 +2,7 @@ export type ProjectCategory =
   | "React Native"
   | "Flutter"
   | "React"
+  | "Java"
   | "Python"
   | "MERN"
   | "Rust"
