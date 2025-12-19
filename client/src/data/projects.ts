@@ -3,7 +3,7 @@ import type { Project } from "@/types/project";
 export const projects: Project[] = [
 	{
 		id: 0,
-		title: "Decentralised-StorageAreaNetworks",
+		title: "Decentralised_StorageAreaNetworks",
 		description:
 			"Decentralized Storage Area Network proof-of-concept using IPFS, Shamir's Secret Sharing, and Smart Contracts for immutable records with client-side encryption and zero-knowledge privacy.",
 		image: "https://images.pexels.com/photos/7887800/pexels-photo-7887800.jpeg",
