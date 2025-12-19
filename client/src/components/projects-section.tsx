@@ -79,6 +79,16 @@ export default function ProjectsSection() {
 					</button>
 					<button
 						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
+							activeFilter === "Java"
+								? "active"
+								: "hover:border-primary hover:text-primary"
+						}`}
+						onClick={() => setActiveFilter("Java")}
+					>
+						Java
+					</button>
+					<button
+						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
 							activeFilter === "Flutter"
 								? "active"
 								: "hover:border-primary hover:text-primary"
@@ -87,6 +97,7 @@ export default function ProjectsSection() {
 					>
 						Flutter
 					</button>
+
 					<button
 						className={`px-4 py-2 rounded-lg border border-gray-200 font-medium transition-all ${
 							activeFilter === "Python"
@@ -241,6 +252,9 @@ function CategoryBadge({ category }: { category: ProjectCategory }) {
 			break;
 		case "JavaScript":
 			bgColor = "bg-[#F7DF1E]";
+			break;
+		case "Java":
+			bgColor = "bg-[#007396]";
 			break;
 	}
 
