@@ -1,110 +1,178 @@
 import { motion } from "framer-motion";
 import { Code, Smartphone, Drill } from "lucide-react";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, rotateX: -15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+};
+
+const iconVariants = {
+  rest: { scale: 1, rotate: 0 },
+  hover: {
+    scale: 1.2,
+    rotate: [0, -10, 10, -5, 5, 0],
+    transition: {
+      rotate: {
+        duration: 0.6,
+        ease: "easeInOut",
+      },
+    },
+  },
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+    },
+  },
+};
+
+const skills = [
+  {
+    icon: Code,
+    title: "Programming Languages",
+    colorClass: "primary",
+    items: [
+      "C++, C, PostgreSQL",
+      "Rust",
+      "Java, Python, Kotlin",
+    ],
+  },
+  {
+    icon: Smartphone,
+    title: "Web & App Development",
+    colorClass: "secondary",
+    items: [
+      "React.js, TailwindCSS",
+      "Javascript, TypeScript",
+      "React Native, Angular, Flutter",
+      "Express.js, MongoDB",
+    ],
+  },
+  {
+    icon: Drill,
+    title: "Tools & Technologies",
+    colorClass: "accent",
+    items: [
+      "Linux, GitHub, Postman",
+      "Adobe Illustrator, InDesign",
+      "Jupiter Notebook, LaTeX",
+      "VS Code, Android Studio",
+    ],
+  },
+];
+
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-zinc-100">
+    <section id="skills" className="py-20 bg-zinc-100 overflow-hidden">
       <div className="container mx-auto px-6">
-        <motion.h2 
-          className="text-3xl font-bold mb-12 text-center"
-          initial={{ opacity: 0, y: -10 }}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, type: "spring" }}
+          className="text-center mb-12"
         >
-          Technical Skills
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div 
-            className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.span
+            className="inline-block text-sm font-medium text-primary uppercase tracking-wider mb-2"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ delay: 0.2 }}
           >
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <Code className="text-primary text-xl" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Programming Languages</h3>
-            <ul className="space-y-2 text-zinc-500">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                C++, C, PostgreSQL
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                Rust
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                Java, Python, Kotlin
-              </li>
-            </ul>
-          </motion.div>
-          
-          <motion.div 
-            className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
-              <Smartphone className="text-secondary text-xl" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Web & App Development</h3>
-            <ul className="space-y-2 text-zinc-500">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-                React.js, TailwindCSS
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-                Javascript, TypeScript
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-                React Native, Angular, Flutter
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-                Express.js, MongoDB
-              </li>
-            </ul>
-          </motion.div>
-          
-          <motion.div 
-            className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6">
-              <Drill className="text-accent text-xl" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Tools & Technologies</h3>
-            <ul className="space-y-2 text-zinc-500">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
-                Linux, GitHub, Postman
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
-                Adobe Illustrator, InDesign
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
-                Jupiter Notebook, LaTeX
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
-                VS Code, Android Studio
-              </li>
-            </ul>
-          </motion.div>
-        </div>
+            What I Know
+          </motion.span>
+          <h2 className="text-3xl font-bold">Technical Skills</h2>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill.title}
+              className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 hover-lift"
+              variants={cardVariants}
+              whileHover={{
+                y: -8,
+                transition: { type: "spring", stiffness: 300, damping: 20 },
+              }}
+            >
+              <motion.div
+                className={`w-14 h-14 bg-${skill.colorClass}/10 rounded-2xl flex items-center justify-center mb-6 relative overflow-hidden`}
+                variants={iconVariants}
+                initial="rest"
+                whileHover="hover"
+              >
+                {/* Shimmer effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.6 }}
+                />
+                <skill.icon className={`text-${skill.colorClass} text-2xl relative z-10`} />
+              </motion.div>
+
+              <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
+                {skill.title}
+              </h3>
+
+              <motion.ul
+                className="space-y-3 text-zinc-500"
+                variants={containerVariants}
+              >
+                {skill.items.map((item, i) => (
+                  <motion.li
+                    key={i}
+                    className="flex items-center group/item"
+                    variants={listItemVariants}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <motion.span
+                      className={`w-2 h-2 bg-${skill.colorClass} rounded-full mr-3`}
+                      whileHover={{ scale: 1.5 }}
+                    />
+                    <span className="group-hover/item:text-foreground transition-colors">
+                      {item}
+                    </span>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
