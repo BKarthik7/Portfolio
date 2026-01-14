@@ -127,7 +127,7 @@ export default function HeroSection() {
 							variants={itemVariants}
 							className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
 						>
-							App and Web{" "}
+							Game, App and Web{" "}
 							<span className="gradient-text-animated">Developer</span>
 						</motion.h1>
 
@@ -135,8 +135,7 @@ export default function HeroSection() {
 							variants={itemVariants}
 							className="text-lg md:text-xl text-zinc-500 mb-8 max-w-lg"
 						>
-							C++ Enthusiast | Aspiring Software Engineer |
-							Actively seeking internship opportunities
+							Software Engineer | C++ Enthusiast
 						</motion.p>
 
 						<motion.div
