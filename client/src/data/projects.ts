@@ -213,22 +213,43 @@ export const projects: Project[] = [
 	},
 	{
 		id: 21,
+		title: "AshtaPashaka",
+		description:
+			"An 8-player multiplayer Ludo game with real-time WebSocket gameplay, turn timers, and spectator mode.",
+		image: "https://images.pexels.com/photos/7625920/pexels-photo-7625920.jpeg",
+		category: "Games",
+		isMobile: false,
+		tags: ["React", "WebSockets"],
+	},
+	{
+		id: 22,
+		title: "Kitchen Chaos",
+		description:
+			"A fast-paced cooking game built with Unity where players prepare and deliver recipes within a time limit. Features dynamic order spawning, time-based mechanics with extensions on successful deliveries, and state-based game management.",
+		image: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
+		category: "Games",
+		isMobile: false,
+		tags: ["Unity", "C#", "Game"],
+		link: "https://play.unity.com/en/games/852908ee-4856-4ddc-979e-e3f0198be4f7/kitchenchaos",
+	},
+	{
+		id: 23,
 		title: "The-Classic-Snake-Game",
 		description:
 			"A web-based rendition of the classic Snake game, built for browser play.",
 		image: "https://images.pexels.com/photos/8762881/pexels-photo-8762881.jpeg",
-		category: "JavaScript",
+		category: "Games",
 		isMobile: false,
 		tags: ["Javascript", "Game"],
 	},
 	{
-		id: 22,
+		id: 24,
 		title: "Maze-Game-Extention",
 		description:
 			"A browser-based maze game extension built with vanilla JavaScript.",
 		image: "https://images.pexels.com/photos/1904198/pexels-photo-1904198.jpeg",
-		category: "JavaScript",
+		category: "Games",
 		isMobile: false,
 		tags: ["Game", "Javascript"],
-	},
+	}
 ];

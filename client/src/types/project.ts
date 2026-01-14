@@ -7,15 +7,16 @@ export type ProjectCategory =
   | "MERN"
   | "Rust"
   | "AngularJS"
-  | "JavaScript";
+  | "JavaScript"
+  | "Games";
 
 export interface Project {
-	id: number;
-	title: string;
-	description: string;
-	image: string;
-	category: ProjectCategory;
-	tags: string[];
-	isMobile: boolean;
-	link?: string;
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  category: ProjectCategory;
+  tags: string[];
+  isMobile: boolean;
+  link?: string;
 }
