@@ -230,25 +230,23 @@ export const projects: Project[] = [
 		category: "Games",
 		isMobile: false,
 		tags: ["Unity", "C#", "Game"],
-		link: "https://play.unity.com/en/games/852908ee-4856-4ddc-979e-e3f0198be4f7/kitchenchaos",
 	},
 	{
 		id: 23,
 		title: "SaveThePrincess",
 		description:
 			"A 2D action platformer built in Unity where players battle enemies to rescue the princess, featuring smooth movement and dynamic enemy respawning.",
-		image: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
+		image: "https://images.pexels.com/photos/1637884/pexels-photo-1637884.jpeg",
 		category: "Games",
 		isMobile: false,
 		tags: ["Unity", "C#"],
-		link: "https://play.unity.com/en/games/5fa3b2bc-5640-49e7-9324-08991b441d96/index",
 	},
 	{
 		id: 24,
 		title: "Hungry_Bunny",
 		description:
 			"A Unity-based 2D platformer where players control a bunny to collect carrots, featuring smooth controls and joystick support.",
-		image: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
+		image: "https://images.pexels.com/photos/7104730/pexels-photo-7104730.jpeg",
 		category: "Games",
 		isMobile: true,
 		tags: ["Unity", "C#"],
