@@ -3,7 +3,7 @@ import type { Project } from "@/types/project";
 export const projects: Project[] = [
 	{
 		id: 0,
-		title: "Decentralised_StorageAreaNetworks",
+		title: "Decentralised_SAN",
 		description:
 			"Decentralized Storage Area Network proof-of-concept using IPFS, Shamir's Secret Sharing, and Smart Contracts for immutable records with client-side encryption and zero-knowledge privacy.",
 		image: "https://images.pexels.com/photos/7887800/pexels-photo-7887800.jpeg",
@@ -223,7 +223,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: 22,
-		title: "Kitchen Chaos",
+		title: "KitchenChaos",
 		description:
 			"A fast-paced cooking game built with Unity where players prepare and deliver recipes within a time limit. Features dynamic order spawning, time-based mechanics with extensions on successful deliveries, and state-based game management.",
 		image: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
@@ -234,6 +234,27 @@ export const projects: Project[] = [
 	},
 	{
 		id: 23,
+		title: "SaveThePrincess",
+		description:
+			"A 2D action platformer built in Unity where players battle enemies to rescue the princess, featuring smooth movement and dynamic enemy respawning.",
+		image: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
+		category: "Games",
+		isMobile: false,
+		tags: ["Unity", "C#"],
+		link: "https://play.unity.com/en/games/5fa3b2bc-5640-49e7-9324-08991b441d96/index",
+	},
+	{
+		id: 24,
+		title: "Hungry_Bunny",
+		description:
+			"A Unity-based 2D platformer where players control a bunny to collect carrots, featuring smooth controls and joystick support.",
+		image: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
+		category: "Games",
+		isMobile: true,
+		tags: ["Unity", "C#"],
+	},
+	{
+		id: 25,
 		title: "The-Classic-Snake-Game",
 		description:
 			"A web-based rendition of the classic Snake game, built for browser play.",
@@ -243,7 +264,7 @@ export const projects: Project[] = [
 		tags: ["Javascript", "Game"],
 	},
 	{
-		id: 24,
+		id: 26,
 		title: "Maze-Game-Extention",
 		description:
 			"A browser-based maze game extension built with vanilla JavaScript.",

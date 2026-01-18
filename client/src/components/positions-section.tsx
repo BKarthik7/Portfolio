@@ -18,6 +18,34 @@ export default function PositionsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <motion.div 
             className="bg-zinc-100 p-8 rounded-xl"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-start mb-4">
+              <div className="bg-accent/10 p-3 rounded-lg">
+                <Laptop className="text-accent h-6 w-6" />
+              </div>
+              <div className="ml-4">
+                <h3 className="text-xl font-semibold">Senior Core Member</h3>
+                <p className="text-zinc-500">CodeRIT | Nov 2024 - Present</p>
+              </div>
+            </div>
+            <div className="space-y-2 text-zinc-500 ml-16">
+              <p className="flex">
+                <span className="mr-2">•</span>
+                <span> Created a coding culture on campus by organizing monthly coding challenges and workshops for members of all skill levels.</span>
+              </p>
+              <p className="flex">
+                <span className="mr-2">•</span>
+                <span>Conducted events like wHACKiest (Hackathon), fostering innovation and collaboration among participants.</span>
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="bg-zinc-100 p-8 rounded-xl"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -28,7 +56,7 @@ export default function PositionsSection() {
                 <ShieldAlert className="text-primary h-6 w-6" />
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-semibold">Core Member Designer</h3>
+                <h3 className="text-xl font-semibold">Core Member and Design Head</h3>
                 <p className="text-zinc-500">secuRIT | Jan 2024 - Present</p>
               </div>
             </div>
@@ -40,30 +68,6 @@ export default function PositionsSection() {
               <p className="flex">
                 <span className="mr-2">•</span>
                 <span>Organized and conducted hackRITual (CTF) and Innovision (Hackathon), enhancing engagement within the cybersecurity community.</span>
-              </p>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="bg-zinc-100 p-8 rounded-xl"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex items-start mb-4">
-              <div className="bg-accent/10 p-3 rounded-lg">
-                <Laptop className="text-accent h-6 w-6" />
-              </div>
-              <div className="ml-4">
-                <h3 className="text-xl font-semibold">Core Member Designer</h3>
-                <p className="text-zinc-500">CodeRIT | Nov 2024 - Present</p>
-              </div>
-            </div>
-            <div className="space-y-2 text-zinc-500 ml-16">
-              <p className="flex">
-                <span className="mr-2">•</span>
-                <span>Led the organization of wHACKiest (Hackathon), fostering innovation and collaboration among participants.</span>
               </p>
             </div>
           </motion.div>
