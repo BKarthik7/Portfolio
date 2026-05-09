@@ -107,7 +107,7 @@ export default function SkillsSection() {
           className="text-center mb-12"
         >
           <motion.span
-            className="inline-block text-sm font-medium text-primary uppercase tracking-wider mb-2 font-display"
+            className="block text-sm font-medium text-primary uppercase tracking-wider mb-2 font-display"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

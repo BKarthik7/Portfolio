@@ -124,8 +124,8 @@ export default function ExperienceSection() {
                 }}
               >
                 {[
-                  "Architected the company's AI Context Layer — a production agentic RAG system routing queries through MCP-orchestrated tool servers to surface structured, real-time knowledge across internal products and pipelines.",
-                  "Engineered a LangGraph multi-agent orchestration framework with autonomous task decomposition, parallel retrieval, and cross-source synthesis — enabling context-aware automation for internal engineering workflows.",
+                  "Architected the company's AI Context Layer a production agentic RAG system routing queries through MCP-orchestrated tool servers to surface structured, real-time knowledge across internal products and pipelines.",
+                  "Engineered a LangGraph multi-agent orchestration framework with autonomous task decomposition, parallel retrieval, and cross-source synthesis enabling context-aware automation for internal engineering workflows.",
                   "Shipped an end-to-end image style fine-tuning pipeline (LoRA + diffusion models) to generate game assets visually consistent with each game's art direction, eliminating off-brand outputs from the production pipeline.",
                 ].map((item, i) => (
                   <motion.p
@@ -201,7 +201,7 @@ export default function ExperienceSection() {
                 }}
               >
                 {[
-                  "Owned the full UI layer of a client-facing web platform using Angular and TailwindCSS — sole frontend engineer responsible from component architecture through production launch.",
+                  "Owned the full UI layer of a client-facing web platform using Angular and TailwindCSS sole frontend engineer responsible from component architecture through production launch.",
                   "Integrated and validated RESTful APIs in collaboration with the backend team, identifying and resolving data contract issues before client demos; shipped iteratively across Agile sprint cycles.",
                 ].map((item, i) => (
                   <motion.p
