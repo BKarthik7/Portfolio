@@ -185,6 +185,10 @@ export default function ExperienceSection() {
                   <span className="text-zinc-500 text-sm">Jun-Sep 2024</span>
                 </div>
               </div>
+              <div className="mb-3">
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">Tech Stack:</span>
+                <span className="text-sm text-zinc-600 ml-2">Angular, TypeScript, PostgreSQL, DBeaver</span>
+              </div>
               <motion.div
                 className="space-y-3 text-zinc-500"
                 initial="hidden"

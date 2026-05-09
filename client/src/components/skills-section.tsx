@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Brain, Database, Monitor, Wrench } from "lucide-react";
+import { Code2, Cpu, Server, Monitor, Settings } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,7 +55,7 @@ const listItemVariants = {
 
 const skills = [
   {
-    icon: Code,
+    icon: Code2,
     title: "Programming Languages",
     colorClass: "primary",
     items: [
@@ -64,7 +64,7 @@ const skills = [
     ],
   },
   {
-    icon: Brain,
+    icon: Cpu,
     title: "AI / ML",
     colorClass: "secondary",
     items: [
@@ -75,7 +75,7 @@ const skills = [
     ],
   },
   {
-    icon: Database,
+    icon: Server,
     title: "Backend & Databases",
     colorClass: "accent",
     items: [
@@ -85,20 +85,12 @@ const skills = [
   },
   {
     icon: Monitor,
-    title: "Frontend",
+    title: "Frontend & Tools",
     colorClass: "primary",
     items: [
       "React.js, React Native, Angular",
-      "TailwindCSS",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Tools & Technologies",
-    colorClass: "secondary",
-    items: [
-      "Git, Linux, Docker, CI/CD",
-      "AWS Amplify, AppSync, Postman",
+      "TailwindCSS, Git, Linux, Docker",
+      "CI/CD, AWS Amplify, Postman",
     ],
   },
 ];
@@ -127,7 +119,7 @@ export default function SkillsSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -144,7 +136,7 @@ export default function SkillsSection() {
               }}
             >
               <motion.div
-                className={`w-12 h-12 bg-${skill.colorClass}/10 rounded-none flex items-center justify-center mb-4 border-2 border-${skill.colorClass}`}
+                className="w-14 h-14 bg-muted/20 rounded-none flex items-center justify-center mb-4 border-2 border-border relative overflow-hidden"
                 variants={iconVariants}
                 initial="rest"
                 whileHover="hover"
@@ -156,7 +148,7 @@ export default function SkillsSection() {
                   whileHover={{ x: "100%" }}
                   transition={{ duration: 0.6 }}
                 />
-                <skill.icon className={`text-${skill.colorClass} text-xl relative z-10`} />
+                <skill.icon className="text-primary text-2xl relative z-10" strokeWidth={2} />
               </motion.div>
 
               <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors font-display">
@@ -177,7 +169,7 @@ export default function SkillsSection() {
                     style={{ animationDelay: `${i * 0.1}s` }}
                   >
                     <motion.span
-                      className={`w-2 h-2 bg-${skill.colorClass} rounded-none mr-3 border border-${skill.colorClass}`}
+                      className="w-2 h-2 bg-primary rounded-none mr-3 border border-primary"
                       whileHover={{ scale: 1.2 }}
                     />
                     <span className="group-hover/item:text-foreground transition-colors">

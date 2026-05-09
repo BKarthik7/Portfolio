@@ -145,7 +145,7 @@ export default function ContactSection() {
                     <div className="ml-4">
                       <h3 className="font-medium">Resume</h3>
                       <a
-                        href="https://drive.google.com/file/d/1mrtdwbfZP6yJLb5U2lUt2qJTtYJfJ7o6/view?usp=sharing"
+                        href="https://drive.google.com/uc?export=download&id=1mrtdwbfZP6yJLb5U2lUt2qJTtYJfJ7o6"
                         className="text-sm text-primary hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
