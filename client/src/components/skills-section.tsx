@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Smartphone, Drill } from "lucide-react";
+import { Code, Brain, Database, Monitor, Wrench } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -59,31 +59,46 @@ const skills = [
     title: "Programming Languages",
     colorClass: "primary",
     items: [
-      "C++, C, PostgreSQL",
-      "Rust",
-      "Java, Python, Kotlin",
+      "C++, Python, JavaScript",
+      "TypeScript, Rust, SQL",
     ],
   },
   {
-    icon: Smartphone,
-    title: "Web & App Development",
+    icon: Brain,
+    title: "AI / ML",
     colorClass: "secondary",
     items: [
-      "React.js, TailwindCSS",
-      "Javascript, TypeScript",
-      "React Native, Angular, Flutter",
-      "Express.js, MongoDB",
+      "Agentic RAG, LLM Orchestration",
+      "LangChain, LangGraph, MCP Servers",
+      "Vector Databases, Image Generation & Fine-tuning",
+      "Claude Code, OpenAI Codex",
     ],
   },
   {
-    icon: Drill,
-    title: "Tools & Technologies",
+    icon: Database,
+    title: "Backend & Databases",
     colorClass: "accent",
     items: [
-      "Linux, GitHub, Postman",
-      "Adobe Illustrator, InDesign",
-      "Jupiter Notebook, LaTeX",
-      "VS Code, Android Studio",
+      "Node.js, Express.js, Spring Boot",
+      "REST APIs, PostgreSQL, MongoDB",
+    ],
+  },
+  {
+    icon: Monitor,
+    title: "Frontend",
+    colorClass: "primary",
+    items: [
+      "React.js, React Native, Angular",
+      "TailwindCSS",
+    ],
+  },
+  {
+    icon: Wrench,
+    title: "Tools & Technologies",
+    colorClass: "secondary",
+    items: [
+      "Git, Linux, Docker, CI/CD",
+      "AWS Amplify, AppSync, Postman",
     ],
   },
 ];
@@ -112,7 +127,7 @@ export default function SkillsSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
