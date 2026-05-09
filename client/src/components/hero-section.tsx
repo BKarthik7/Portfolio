@@ -118,22 +118,22 @@ export default function HeroSection() {
 							>
 								<Sparkles className="w-6 h-6 text-primary" />
 							</motion.span>
-							<span className="text-sm font-medium text-primary uppercase tracking-wider">
+							<span className="text-sm font-medium text-primary uppercase tracking-wider font-display">
 								Welcome to my portfolio
 							</span>
 						</motion.div>
 
 						<motion.h1
 							variants={itemVariants}
-							className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
+							className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 editorial-heading"
 						>
 							Game, App and Web{" "}
-							<span className="gradient-text-animated">Developer</span>
+							<span className="gradient-text-animated font-serif italic">Developer</span>
 						</motion.h1>
 
 						<motion.p
 							variants={itemVariants}
-							className="text-lg md:text-xl text-zinc-500 mb-8 max-w-lg"
+							className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg font-serif leading-relaxed"
 						>
 							Software Engineer | C++ Enthusiast
 						</motion.p>
@@ -149,7 +149,7 @@ export default function HeroSection() {
 							>
 								<Button
 									onClick={() => handleScroll("projects")}
-									className="group btn-ripple relative overflow-hidden"
+									className="btn-brutalist group relative overflow-hidden font-display font-semibold"
 									size="lg"
 								>
 									<span className="relative z-10 flex items-center">
@@ -174,10 +174,30 @@ export default function HeroSection() {
 								whileTap="tap"
 							>
 								<Button
+									asChild
+									variant="outline"
+									size="lg"
+									className="btn-brutalist hover:bg-primary/10 font-display font-semibold"
+								>
+									<a
+										href="https://drive.google.com/file/d/1mrtdwbfZP6yJLb5U2lUt2qJTtYJfJ7o6/view?usp=sharing"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										View Resume
+									</a>
+								</Button>
+							</motion.div>
+							<motion.div
+								variants={buttonVariants}
+								whileHover="hover"
+								whileTap="tap"
+							>
+								<Button
 									onClick={() => handleScroll("contact")}
 									variant="outline"
 									size="lg"
-									className="hover:bg-primary/10"
+									className="btn-brutalist hover:bg-primary/10 font-display font-semibold"
 								>
 									Contact Me
 								</Button>

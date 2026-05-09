@@ -68,7 +68,7 @@ export default function Navbar() {
             <div className="h-10 w-10 bg-primary rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">BK</span>
             </div>
-            <span className="text-lg font-semibold">B Karthik</span>
+            <span className="text-lg font-semibold font-display">B Karthik</span>
           </div>
           
           <nav className="hidden md:flex space-x-8">

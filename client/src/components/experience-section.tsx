@@ -60,11 +60,11 @@ export default function ExperienceSection() {
             >
               <Briefcase className="w-5 h-5 text-primary" />
             </motion.span>
-            <span className="text-sm font-medium text-primary uppercase tracking-wider">
+            <span className="text-sm font-medium text-primary uppercase tracking-wider font-display">
               My Journey
             </span>
           </motion.div>
-          <h2 className="text-3xl font-bold">Work Experience</h2>
+          <h2 className="text-3xl font-bold editorial-heading font-display">Work Experience</h2>
         </motion.div>
 
         <motion.div
@@ -79,21 +79,20 @@ export default function ExperienceSection() {
             variants={cardVariants}
           >
             <motion.div
-              className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"
+              className="absolute -left-[9px] top-0 w-4 h-4 rounded-none bg-primary border-2 border-primary"
               variants={dotVariants}
               animate="pulse"
             />
             <motion.div
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300"
+              className="bg-card p-6 rounded-none shadow-none border-2 border-border hover:border-primary transition-all duration-300 hover-lift"
               whileHover={{
-                y: -5,
-                scale: 1.02,
+                y: -3,
                 transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
             >
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <motion.h3
-                  className="text-xl font-semibold"
+                  className="text-xl font-semibold font-display"
                   whileHover={{ color: "hsl(var(--primary))" }}
                 >
                   Software Engineer Intern
@@ -157,21 +156,20 @@ export default function ExperienceSection() {
             variants={cardVariants}
           >
             <motion.div
-              className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"
+              className="absolute -left-[9px] top-0 w-4 h-4 rounded-none bg-primary border-2 border-primary"
               variants={dotVariants}
               animate="pulse"
             />
             <motion.div
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300"
+              className="bg-card p-6 rounded-none shadow-none border-2 border-border hover:border-primary transition-all duration-300 hover-lift"
               whileHover={{
-                y: -5,
-                scale: 1.02,
+                y: -3,
                 transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
             >
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <motion.h3
-                  className="text-xl font-semibold"
+                  className="text-xl font-semibold font-display"
                   whileHover={{ color: "hsl(var(--primary))" }}
                 >
                   Frontend Web Development Intern
@@ -230,7 +228,7 @@ export default function ExperienceSection() {
             variants={cardVariants}
           >
             <motion.div
-              className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-200"
+              className="absolute -left-[9px] top-0 w-4 h-4 rounded-none bg-muted border-2 border-muted"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.6, 0.8, 0.6],
@@ -242,10 +240,9 @@ export default function ExperienceSection() {
               }}
             />
             <motion.div
-              className="bg-white p-6 rounded-xl shadow-sm opacity-70 hover:opacity-100 transition-all duration-300"
+              className="bg-card p-6 rounded-none shadow-none border-2 border-border opacity-70 hover:opacity-100 transition-all duration-300 hover-lift"
               whileHover={{
-                y: -5,
-                scale: 1.02,
+                y: -3,
                 opacity: 1,
                 transition: { type: "spring", stiffness: 300, damping: 20 },
               }}

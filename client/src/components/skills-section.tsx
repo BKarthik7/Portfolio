@@ -115,7 +115,7 @@ export default function SkillsSection() {
           className="text-center mb-12"
         >
           <motion.span
-            className="inline-block text-sm font-medium text-primary uppercase tracking-wider mb-2"
+            className="inline-block text-sm font-medium text-primary uppercase tracking-wider mb-2 font-display"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -123,7 +123,7 @@ export default function SkillsSection() {
           >
             What I Know
           </motion.span>
-          <h2 className="text-3xl font-bold">Technical Skills</h2>
+          <h2 className="text-3xl font-bold editorial-heading font-display">Technical Skills</h2>
         </motion.div>
 
         <motion.div
@@ -136,48 +136,49 @@ export default function SkillsSection() {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.title}
-              className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 hover-lift"
+              className="group bg-card p-6 rounded-none shadow-none hover:shadow-none transition-all duration-300 border-2 border-border hover:border-primary hover-lift"
               variants={cardVariants}
               whileHover={{
-                y: -8,
+                y: -4,
                 transition: { type: "spring", stiffness: 300, damping: 20 },
               }}
             >
               <motion.div
-                className={`w-14 h-14 bg-${skill.colorClass}/10 rounded-2xl flex items-center justify-center mb-6 relative overflow-hidden`}
+                className={`w-12 h-12 bg-${skill.colorClass}/10 rounded-none flex items-center justify-center mb-4 border-2 border-${skill.colorClass}`}
                 variants={iconVariants}
                 initial="rest"
                 whileHover="hover"
               >
                 {/* Shimmer effect */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                   initial={{ x: "-100%" }}
                   whileHover={{ x: "100%" }}
                   transition={{ duration: 0.6 }}
                 />
-                <skill.icon className={`text-${skill.colorClass} text-2xl relative z-10`} />
+                <skill.icon className={`text-${skill.colorClass} text-xl relative z-10`} />
               </motion.div>
 
-              <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
+              <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors font-display">
                 {skill.title}
               </h3>
 
               <motion.ul
-                className="space-y-3 text-zinc-500"
+                className="space-y-2 text-muted-foreground font-serif text-sm leading-relaxed"
                 variants={containerVariants}
               >
                 {skill.items.map((item, i) => (
                   <motion.li
                     key={i}
-                    className="flex items-center group/item"
+                    className="flex items-center group/item slide-in-left"
                     variants={listItemVariants}
-                    whileHover={{ x: 5 }}
+                    whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 300 }}
+                    style={{ animationDelay: `${i * 0.1}s` }}
                   >
                     <motion.span
-                      className={`w-2 h-2 bg-${skill.colorClass} rounded-full mr-3`}
-                      whileHover={{ scale: 1.5 }}
+                      className={`w-2 h-2 bg-${skill.colorClass} rounded-none mr-3 border border-${skill.colorClass}`}
+                      whileHover={{ scale: 1.2 }}
                     />
                     <span className="group-hover/item:text-foreground transition-colors">
                       {item}

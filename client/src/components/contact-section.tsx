@@ -79,7 +79,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
+            <h2 className="text-3xl font-bold mb-4 editorial-heading font-display">Get In Touch</h2>
             <p className="text-lg text-zinc-500 max-w-2xl mx-auto">
               Interested in working together? I'm always open to discussing new projects,
               creative ideas or opportunities to be part of your vision.
@@ -94,9 +94,9 @@ export default function ContactSection() {
               transition={{ duration: 0.5 }}
             >
               <div className="space-y-6">
-                <div className="bg-zinc-100 p-5 rounded-xl">
+                <div className="bg-card p-5 rounded-none border-2 border-border hover:border-primary transition-all duration-300 hover-lift">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-none flex items-center justify-center border-2 border-primary">
                       <Mail className="text-primary h-5 w-5" />
                     </div>
                     <div className="ml-4">
@@ -108,9 +108,9 @@ export default function ContactSection() {
                   </div>
                 </div>
                 
-                <div className="bg-zinc-100 p-5 rounded-xl">
+                <div className="bg-card p-5 rounded-none border-2 border-border hover:border-primary transition-all duration-300 hover-lift">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-none flex items-center justify-center border-2 border-primary">
                       <Phone className="text-primary h-5 w-5" />
                     </div>
                     <div className="ml-4">
@@ -122,9 +122,9 @@ export default function ContactSection() {
                   </div>
                 </div>
                 
-                <div className="bg-zinc-100 p-5 rounded-xl">
+                <div className="bg-card p-5 rounded-none border-2 border-border hover:border-primary transition-all duration-300 hover-lift">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-none flex items-center justify-center border-2 border-primary">
                       <Linkedin className="text-primary h-5 w-5" />
                     </div>
                     <div className="ml-4">
@@ -136,9 +136,9 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="bg-zinc-100 p-5 rounded-xl">
+                <div className="bg-card p-5 rounded-none border-2 border-border hover:border-primary transition-all duration-300 hover-lift">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-none flex items-center justify-center border-2 border-primary">
                       {/* You can use a download icon or keep it simple */}
                       <svg xmlns="http://www.w3.org/2000/svg" className="text-primary h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" /></svg>
                     </div>
