@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShieldAlert, Laptop } from "lucide-react";
+import { Laptop } from "lucide-react";
 
 export default function PositionsSection() {
   return (
@@ -53,7 +53,7 @@ export default function PositionsSection() {
           >
             <div className="flex items-start mb-4">
               <div className="bg-primary/10 p-3 rounded-lg">
-                <ShieldAlert className="text-primary h-6 w-6" />
+                <Laptop className="text-primary h-6 w-6" />
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-semibold">Core Member and Design Head</h3>
