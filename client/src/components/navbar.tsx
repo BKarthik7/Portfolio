@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 
 const navigationLinks = [
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
   { href: "https://drive.google.com/uc?export=download&id=1mrtdwbfZP6yJLb5U2lUt2qJTtYJfJ7o6", label: "Resume", external: true },
 ];
