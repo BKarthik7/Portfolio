@@ -175,7 +175,7 @@ export default function HeroSection() {
 								whileTap="tap"
 							>
 								<Button
-									onClick={() => window.open("https://drive.google.com/uc?export=download&id=1mrtdwbfZP6yJLb5U2lUt2qJTtYJfJ7o6", "_blank")}
+									onClick={() => window.open("https://drive.google.com/file/d/1mrtdwbfZP6yJLb5U2lUt2qJTtYJfJ7o6/view?usp=sharing", "_blank")}
 									variant="outline"
 									size="lg"
 									className="btn-brutalist hover:bg-primary/10 font-display font-semibold"
