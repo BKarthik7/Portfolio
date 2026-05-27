@@ -84,34 +84,31 @@ export default function AboutSection() {
 						transition={{ duration: 0.5 }}
 					>
 						<div className="mb-8">
-							<h2 className="text-3xl font-bold mb-6">
-								My Story
-							</h2>
+							<h2 className="text-3xl font-bold mb-6">My Story</h2>
 							<p className="text-lg leading-relaxed mb-4">
-								Hi, I'm Karthik! My journey into technology
-								began with C++, where I honed my problem-solving
-								skills and discovered the joy of building
-								solutions. Over time, I transitioned to web
-								development, where I combined logic with
-								creativity to design user-friendly, interactive
-								digital experiences.
+								Hi, I'm Karthik! My journey into technology began with C++, where I
+								developed a love for problem-solving and understood what it truly meant
+								to think like an engineer. That foundation pushed me toward web development,
+								where I discovered the joy of turning logic into experiences people can
+								actually see and interact with.
 							</p>
 							<p className="text-lg leading-relaxed mb-4">
-								During my internship at Aamara Technologies, I
-								collaborated with teammates to build an asset
-								management platform. We transformed concepts
-								into tangible solutions, showcasing teamwork and
-								attention to detail. Around this time, I adopted
-								React.js, a game-changing tool in my development
-								process.
+								As I grew, so did my curiosity. I picked up React Native to build for mobile,
+								explored Spring Boot for backend systems, and even ventured into game development
+								with Unity — each new domain teaching me something the previous one couldn't.
+								I've always believed that breadth makes you a sharper engineer, not a scattered one.
+							</p>
+							<p className="text-lg leading-relaxed mb-4">
+								My internship experiences sharpened me further — from owning an entire frontend
+								layer solo, to working deep within AI pipelines involving agentic systems,
+								retrieval-augmented generation, and model fine-tuning. That shift into AI wasn't
+								planned; it was just the most fascinating problem in the room, so I followed it.
 							</p>
 							<p className="text-lg leading-relaxed">
-								To complement my technical skills, I've mastered
-								TailwindCSS for creating elegant, responsive
-								designs. I'm currently expanding my expertise in
-								React Native for cross-platform app development,
-								and exploring Rust, a high-performance language
-								poised to shape the future of digital solutions.
+								Today my toolkit spans React, React Native, Node.js, Python, Rust, and the
+								AI/ML layer on top of all of it. I'm driven by products that are thoughtfully
+								built and reliably shipped — and I'm always looking for the next hard problem
+								worth solving.
 							</p>
 						</div>
 
